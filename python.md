@@ -102,3 +102,19 @@ set1 ^ set2         # {1,2,3,6,7,8}
 set1 - set2         # {1,2,3}
 set1 <= set2        # False (子集)
 set1 < set2         # False (真子集)
+
+## function
+def fn(a:str = '10', *b, c:int) -> str:        # b是一个元组, 函数返回值为 str 类型
+    '''
+        这里是函数功能的说明
+    '''
+    print(f'函数被调用了, 参数为{a}')
+    return 'string'
+fn(1,2,3,4,c=5)
+
+def fn(*,a,b) :
+    print('强制必须赋值传参')
+
+def fn(a,**b) :
+    print('解构为字典b')                        # a == {b: 2, c: 3}
+fn(a=1,b=2,c=3)
