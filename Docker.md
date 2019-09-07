@@ -16,8 +16,10 @@ docker container start containerId      // 启动已经生成且已经停止运�
 docker container kill containerId       // 终止不是自动终止的服务容器(会立即终止)
 bash container stop containerId         // 终止服务容器(会进行收尾清理工作)
 docker container ls                     // 本机正在运行的 docker 容器
+docker ps                               // 本机正在运行的 docker 容器
 Ctrl + d                                // 退出容器
 docker container ls --all               // 本机所有的容器
+docker ps -a                            // 本机所有的容器
 docker container rm containerId         // 删除已经终止运行的 docker 容器文件(不会自动删除)
 docker container logs containerId       // docker 容器的输出(没有 -it 参数使用此命令查看输出)
 docker container cp containerId:/a/b .  // 从正在运行的 docker 容器中将文件拷贝到本机目录(. 当前目录)
@@ -31,7 +33,6 @@ docker container exec -it containerId /bin/bash   // 没有 -it 参数时通过�
 docker container run -p 8000:3000 -it xxx /bin/bash
 docker container run -p 8000:3000 -it xxx:0.0.1 /bin/bash
 docker container run --rm -p 8000:3000 -it xxx /bin/bash    // 容器终止运行后自动删除容器文件
-
 
 # .dockerignore
 ## 打包除以下文件的内容
