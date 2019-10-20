@@ -1,3 +1,6 @@
+# https://learngitbranching.js.org/
+show solution
+
 # 基本操作
 ## 初始化
 git init
@@ -34,6 +37,8 @@ git reset --hard HEAD^
 git reset --hard HEAD~10  
 // 将版本重置到版本号所在版本  
 git reset --hard <版本号>
+// 强制移动分支到某个版本
+git branch -f master HEAD~3
 
 ## 撤销修改
 // 撤销 add 前的工作区修改  
